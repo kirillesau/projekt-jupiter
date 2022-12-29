@@ -9,12 +9,17 @@ import { MainHeaderComponent } from './main-header/main-header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { RtCardsComponent } from './card/rt-cards/rt-cards.component';
+import { CardItemComponent } from './card/card-item/card-item.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
-    MainHeaderComponent
+    MainHeaderComponent,
+    RtCardsComponent,
+    CardItemComponent
   ],
     imports: [
         BrowserModule,
@@ -23,6 +28,7 @@ import {MatButtonModule} from "@angular/material/button";
         MatToolbarModule,
         MatIconModule,
         MatButtonModule,
+        MatCardModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
