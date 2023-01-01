@@ -1,0 +1,15 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+mat-spinner {
+  align-self: center;
+}
+
+.search-form-field {
+  margin: 4px 10px 0;
+  width: 60%;
+}

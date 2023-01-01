@@ -1,11 +1,10 @@
-<mat-card class="example-card">
+<mat-card (click)="navigateToSinglePage()" class="card" matRipple [ngStyle]="backgroundColor(trip.art)">
+  <div class="genommenBadge" [ngStyle]="{'background': trip.genommen ? 'brown' : null}">
+    <mat-icon *ngIf="trip.halberPreis">euro_symbol</mat-icon>
+  </div>
+
   <mat-card-header>
-    <mat-card-title>WASSERSKI HAMM</mat-card-title>
-    <mat-card-subtitle>Erlebnis, Spass & Action</mat-card-subtitle>
+    <mat-card-title>{{trip.tripName}}</mat-card-title>
+    <mat-card-subtitle>{{trip.art}}</mat-card-subtitle>
   </mat-card-header>
-  <mat-card-content>
-    <div class="content">
-      Wasserski und Wakeboard fahren kann jeder. Und wer es nicht kann, lernt es in Kürze. Die Wasserski-Seilbahn bietet euch einen leichten Einstieg. Ohne großen Aufwand gleitet ihr von einer anfängerfreundlichen Rampe ins kühle Nass und erlebt im nächsten Moment das aufregende Gleiten auf dem Wasser. Denn dort, wo fester Boden aufhört, fängt der Spaß an. Anschließend könnt ihr Eis und Kaffee auf den Sonnenterrassen genießen, während ihr den Akrobaten und Übenden zuschaut.
-    </div>
-  </mat-card-content>
 </mat-card>

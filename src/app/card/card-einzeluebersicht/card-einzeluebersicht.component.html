@@ -1,0 +1,54 @@
+<app-singlepage-header [tripName]="trip.tripName" [rtLink]="trip.link"></app-singlepage-header>
+
+<mat-chip-list>
+  <mat-chip *ngIf="trip.genommen">genommen</mat-chip>
+  <mat-chip *ngIf="trip.halberPreis">halber Preis</mat-chip>
+  <mat-chip *ngIf="!trip.halberPreis">umsonst</mat-chip>
+</mat-chip-list>
+
+<mat-card *ngIf="trip.description">
+  <mat-card-header>
+    <mat-card-title>Übersicht</mat-card-title>
+    <mat-card-subtitle>{{trip.art}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{trip.description}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="trip.additionalInfo">
+  <mat-card-header>
+    <mat-card-title>Zusatzinformation</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{trip.additionalInfo}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="trip.performance">
+  <mat-card-header>
+    <mat-card-title>Angebot</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{trip.performance}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="trip.validDate">
+  <mat-card-header>
+    <mat-card-title>Datumseinschränkungen</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{trip.validDate}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="trip.price">
+  <mat-card-header>
+    <mat-card-title>Preis</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{trip.price}}
+  </mat-card-content>
+</mat-card>
+
